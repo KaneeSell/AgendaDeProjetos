@@ -46,7 +46,7 @@ export default function CadastroAgenda(props: {
           alert("Registro realizado com sucesso!");
           setIsLoading(false);
           reset({ name: "", descricao: "" });
-          handleClose()
+          handleClose
         } else {
           if (resStatus && resMessage) {
             alert(resStatus + " : " + resMessage);

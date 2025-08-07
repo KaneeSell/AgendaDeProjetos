@@ -6,7 +6,7 @@ import Loading from "../components/Loading";
 export default function RenderEventos() {
   const [isLoading, setIsLoading] = useState(false);
   const [clickEvent, setClickEvent] = useState(null);
-  const [resData, setResData] = useState<any[]>([]);
+  const [resData, setResData] = useState<[]>([]);
   const hasFetched = useRef(false);
   const loadingAgenda = async () => {
     const token = localStorage.getItem("token");
