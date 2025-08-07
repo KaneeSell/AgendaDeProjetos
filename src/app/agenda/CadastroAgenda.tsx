@@ -46,7 +46,8 @@ export default function CadastroAgenda(props: {
           alert("Registro realizado com sucesso!");
           setIsLoading(false);
           reset({ name: "", descricao: "" });
-          handleClose
+          // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+          if (handleClose) handleClose;
         } else {
           if (resStatus && resMessage) {
             alert(resStatus + " : " + resMessage);
@@ -71,7 +72,7 @@ export default function CadastroAgenda(props: {
       setIsLoading(false);
     }
   };
-  const handleClose = props.onClick
+  const handleClose = props.onClick;
   return (
     <div className="border-1 border-green-400 rounded-2xl px-10 pb-10 relative">
       {isLoading && <Loading />}

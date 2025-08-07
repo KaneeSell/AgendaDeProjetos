@@ -3,10 +3,16 @@ import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 import Loading from "../components/Loading";
 
+type Evento = {
+id: number | string;
+name: string;
+descricao: string;
+isActive: boolean;
+};
 export default function RenderEventos() {
   const [isLoading, setIsLoading] = useState(false);
-  const [clickEvent, setClickEvent] = useState(null);
-  const [resData, setResData] = useState<[]>([]);
+  const [clickEvent, setClickEvent] = useState<Evento | null>(null);
+  const [resData, setResData] = useState<Evento[]>([]);
   const hasFetched = useRef(false);
   const loadingAgenda = async () => {
     const token = localStorage.getItem("token");
@@ -71,7 +77,7 @@ export default function RenderEventos() {
                 ${clickEvent.isActive? 'bg-green-400': 'bg-red-400'}
                 `}
             onClick={() => setClickEvent(null)}
-            id={clickEvent.id}
+            id={clickEvent.id.toString()}
           >
             <p className="text-2xl">
               <strong>Nome:</strong> {clickEvent.name}
@@ -93,7 +99,7 @@ export default function RenderEventos() {
                 ${e.isActive? 'bg-green-400': 'bg-red-400'}
                 `}
               onClick={() => setClickEvent(e)}
-              id={e.id}
+              id={e.id.toString()}
             >
               <p>
                 <strong>Nome:</strong> {e.name}

@@ -21,7 +21,7 @@ export default function Perfil() {
       }
     }
     verificar()
-  }, []);
+  }, [router]);
 
   if (blockPage) return <LayoutPaiTema><Loading/></LayoutPaiTema>
 

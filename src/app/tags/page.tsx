@@ -21,7 +21,7 @@ export default function Tags() {
       }
     }
     verificar()
-  }, []);
+  }, [router]);
 
   if (blockPage) return <LayoutPaiTema><Loading/></LayoutPaiTema>
 

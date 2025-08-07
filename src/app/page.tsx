@@ -22,7 +22,7 @@ export default function Inicio() {
       }
     }
     verificar();
-  }, []);
+  }, [router]);
 
   if (blockPage)
     return (

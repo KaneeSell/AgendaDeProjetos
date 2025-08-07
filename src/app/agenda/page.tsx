@@ -24,7 +24,7 @@ export default function Agenda() {
       }
     }
     verificar();
-  }, []);
+  }, [router]);
 
   if (blockPage)
     return (
@@ -38,7 +38,7 @@ export default function Agenda() {
       <PaginaSegura />
       <Menu />
       <div className="w-full mt-15 flex flex-col gap-3 items-center justify-center">
-        {btnNovoEvento && <CadastroAgenda onClick={()=> setBtnNovoEvento(false)}/>}
+        {btnNovoEvento && <CadastroAgenda onClick={()=>setBtnNovoEvento(false)}/>}
         {!btnNovoEvento && (
           <div className="w-full flex flex-col gap-5 justify-center items-center ">
             <button

@@ -19,7 +19,7 @@ export default function Register() {
       }
     }
     verificar();
-  }, []);
+  }, [router]);
   if (blockPage) return <LayoutPaiTema><Loading/></LayoutPaiTema>
   return (
     <LayoutPaiTema>

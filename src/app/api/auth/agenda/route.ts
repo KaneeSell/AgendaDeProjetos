@@ -21,7 +21,7 @@ export async function GET(req: NextRequest) {
   try {
     const response = await getAgenda(token);
     return NextResponse.json(response);
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Erro no getAgenda:", error);
     return NextResponse.json(
       { status: 500, message: "Erro ao buscar agendas." },
