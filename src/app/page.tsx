@@ -38,7 +38,7 @@ export default function Inicio() {
       <div className="w-full pt-15 flex flex-col gap-3 items-center justify-center">
         <Article id="1" titulo="Inicio">
           <span className="flex text-center text-nowrap">
-            Seja bem vindo ao<strong className="ms-1">Agenda</strong>!
+            Seja bem vindo a<strong className="ms-1">Agenda</strong>!
           </span>
         </Article>
       </div>

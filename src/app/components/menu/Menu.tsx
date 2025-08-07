@@ -3,14 +3,13 @@ import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
 import logo from "../../favicon.ico";
 import { Fragment, useState } from "react";
-import { IoHomeOutline } from "react-icons/io5";
+import { IoHomeOutline, IoPricetagsOutline } from "react-icons/io5";
 import { ThemeBtn, ThemeBtnReduzido } from "../theme/ThemeButton";
 import { BtnWhatsapp } from "../Contato";
 import BtnLogout from "../BtnLogout";
 import Link from "next/link";
-import { FiShoppingCart } from "react-icons/fi";
-import { HiOutlineUserGroup } from "react-icons/hi2";
-import { MdOutlineSportsMotorsports } from "react-icons/md";
+import { TfiAgenda } from "react-icons/tfi";
+import { CgProfile } from "react-icons/cg";
 
 export default function Menu() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -52,19 +51,19 @@ export default function Menu() {
               href={"/agenda"}
               className="py-4 w-1/4 justify-center flex light:hover:bg-neutral-600 light:hover:text-white hover:bg-gray-200 hover:text-black"
             >
-              <HiOutlineUserGroup size={"20px"} className="cursor-pointer " />
+              <TfiAgenda size={"20px"} className="cursor-pointer " />
             </Link>
             <Link
               href={"/tags"}
               className="py-4 w-1/4 justify-center flex light:hover:bg-neutral-600 light:hover:text-white hover:bg-gray-200 hover:text-black"
             >
-              <FiShoppingCart size={"20px"} className="cursor-pointer " />
+              <IoPricetagsOutline size={"20px"} className="cursor-pointer " />
             </Link>
             <Link
               href={"/perfil"}
               className="py-4 w-1/4 justify-center flex light:hover:bg-neutral-600 light:hover:text-white hover:bg-gray-200 hover:text-black"
             >
-              <MdOutlineSportsMotorsports
+              <CgProfile
                 size={"20px"}
                 className="cursor-pointer "
               />
